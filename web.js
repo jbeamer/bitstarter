@@ -3,10 +3,8 @@ var app = express.createServer(express.logger());
 var fs = require('fs');
 
 app.get('/', function(request, response) {
-
   var buffer = fs.readFileSync('index.html');
-
-  var string = "Step 1";
+  var string = buffer.toString();
   response.send(string);
 });
 
