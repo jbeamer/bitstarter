@@ -2,30 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>BirksBeamer Bitstarter</title>
+    <title>BirksBeamer Art Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css" />
-    <style type="text/css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css"/>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css"/>
+	<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css"/>
+	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+	<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css"/>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css"/>
+	<style type="text/css">
 
 	/* Large Desktop */
 	@media (min-width: 980px) {
 		body {
 			padding-top: 60px;
 		}
-		/*
 		.linediv-l {
 			border-right: 1px white solid;
 		}
 		.linediv-r {
 			border-left: 1px white solid;
 		}
-		*/
 	}
 	
 	/* Landscape phones and down */
 	@media (max-width: 480px) {
 		.copy {
 			padding: 2.5% 10%;
+		}
+		.linediv-l {
+			border-bottom: 1px white solid;
+		}
+		.linediv-r {
+			border-top: 1px white solid;
 		}
 	}
 	
@@ -35,9 +45,57 @@
 	body {
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	}
+	.heading, .subheading {
+		font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+		text-align: center;
+	}
     p.lead {
-        padding-top: 15px;
+        padding-top: 1.5%;
+		font-size: 24px;
+		line-height: 30px;
    	}
+	p {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	
+	/* Video pitch and Action */
+	.pitch {
+		padding: 2.5% 0%;
+	}
+	.order {
+		padding: 2% 0%;
+	}
+	.actions {
+		background-color: #343434;
+		padding: 3% 0%;
+	}
+	.video, .thermometer, .order, .social, .statistics {
+		text-align: center;
+	}
+	.statistics h3, .statistics p {
+		color: white;
+	}
+	
+	/* Marketing Copy and Footer */
+	.copy {
+		padding-top: 2.5%;
+		padding-bottom: 2.5%;
+		text-align: justify;
+	}
+	.asset {
+		padding: 2.5% 0%;
+	}
+	.footer {
+		color: #cccccc;
+		text-align: center;
+	}
+	.footer p {
+		font-size: 11px;
+	}
+	.footer a {
+		color: #ccccff;
+	}
     </style>
   </head>
   <body>
@@ -52,7 +110,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">BirksBeamer</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -64,63 +122,128 @@
       </div>
     </div>
 
+	<!-- We use row-fluid inside containers to achieve a reasonable layout -->
     <div class="container">
-      <div class="row navigation">
-	<div class="span2 logo">
-	  Logo
-	</div>
-	<div class="span6 blank">
-	  Blank
-	</div>
-	<div class="span4 about">
-	  About
-	</div>
+      <div class="row-fluid heading">
+		<div class="span12">
+	  		<h1>BirksBeamer Art Project</h1>
+		</div>
       </div>
-      <div class="row heading">
-	<div class="span12">
-	  <h1>Bitstarter Title</h1>
-	</div>
+	  <div class="row-fluid subheading">
+		<div class="span12">
+	  		<p class="lead">We make you a piece of art; you help a kid.</p>
+	    </div>
       </div>
-      <div class="row subheading">
-	<div class="span12">
-	  <p class="lead">This is my first bitstarter project.</p>
-	</div>
+      <div class="row-fluid pitch">
+	     <div class="span5 offset1 video">
+			<img class="img-polaroid" src="http://placehold.it/480x300">
+	     </div>
+	     
+	     <!-- We define a new 'actions' div to contain stats, order and share buttons. -->
+	     <div class="span5 actions">
+		    <div class="span8 offset2">
+			   <div class="statistics">
+				  <div class="span4">
+					<!-- linediv-l and linediv-r give dividing lines that look different in horizontal and vertical layouts -->
+					<div class="linediv-l">
+						<h3>0</h3> <p>backers</p>
+				    </div>
+				  </div>
+			      <div class="span4">
+					<div class="linediv-c">
+						<h3>$0</h3> <p>of $10,000</p>
+					</div>
+				  </div>
+				  <div class="span4">
+					<div class="linediv-r">
+						<h3>10</h3> <p>days left</p>
+					</div>
+				  </div>	
+			   </div>
+			</div>
+			
+			<div class="span10 offset1">
+				  <!-- Bootstrap progress bar -->
+				  <div class="thermometer progress active">
+				    <div class="bar bar-success" style="width: 60%;"></div>
+				    <div class="bar bar-warning" style="width: 40%;"></div>			
+				  </div>	
+			   </div>
+
+			   <div class="span6 offset3 order">
+				  <!-- Standard Bootstrap button. -->
+				  <button class="btn btn-success btn-large">Donate</button>
+			   </div>
+					
+			   <div class="span8 offset2 social">
+				  <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+			      <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+			   </div>
+			</div>
+		 </div>	
+		
+		 <!-- Marketing Copy -->
+		 <div class="row-fluid section1">
+			<div class="span5 offset1 asset">
+				<img class="img-polaroid" src="http://placehold.it/480x300"/>
+			</div>
+			<div class="span5 copy">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et elementum velit. Nunc eleifend venenatis dapibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut neque ipsum, dignissim eget quam quis, accumsan auctor metus. Curabitur egestas mauris eget justo eleifend aliquam. Suspendisse fringilla vitae metus et dapibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam pretium nunc in sem volutpat, et pulvinar lectus tempor. Phasellus lacinia, felis sed egestas congue, nunc mauris volutpat nulla, in tincidunt sem purus sit amet ipsum. Phasellus et justo malesuada, tincidunt enim et, tincidunt ligula. Sed convallis pellentesque feugiat. Nulla ullamcorper bibendum massa, adipiscing iaculis sem commodo non. Praesent sit amet nibh porttitor, feugiat lectus vel, ultricies erat. Maecenas nisl felis, sodales eu sollicitudin vitae, aliquet a orci. Donec dapibus malesuada magna ac condimentum.
+				</p>
+		    </div>
+		 </div>
+		
+		 <div class="row-fluid section2">
+			<div class="span5 offset1 copy copy-right">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et elementum velit. Nunc eleifend venenatis dapibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut neque ipsum, dignissim eget quam quis, accumsan auctor metus. Curabitur egestas mauris eget justo eleifend aliquam. Suspendisse fringilla vitae metus et dapibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam pretium nunc in sem volutpat, et pulvinar lectus tempor. Phasellus lacinia, felis sed egestas congue, nunc mauris volutpat nulla, in tincidunt sem purus sit amet ipsum. Phasellus et justo malesuada, tincidunt enim et, tincidunt ligula. Sed convallis pellentesque feugiat. Nulla ullamcorper bibendum massa, adipiscing iaculis sem commodo non. Praesent sit amet nibh porttitor, feugiat lectus vel, ultricies erat. Maecenas nisl felis, sodales eu sollicitudin vitae, aliquet a orci. Donec dapibus malesuada magna ac condimentum.
+				</p>
+			</div>
+			<div class="span5 asset">
+				<img class="img-polaroid" src="http://placehold.it/480x300"/>
+			</div>
+		 </div>
       </div>
-      <div class="row pitch">
-	<div class="span6 video">
-	  Video
-	</div>
-	<div class="span6">
-	  <div class="thermometer">
-	    Thermometer
-	  </div>
-	  <div class="order">
-	    Order
-	  </div>
-	  <div class="social">
-	    Social
-	  </div>
-	</div>
-      </div>
-      <div class="row section1">
-	<div class="span12">
-	  Marketing Section 1
-	</div>
-      </div>
-      <div class="row section2">
-	<div class="span12">
-	  Marketing Section 2
-	</div>
-      </div>
-      <div class="row faq">
-	<div class="span12">
-	  FAQ      
-	</div>
-      </div>
-      <div class="row footer">
-	<div class="span12">
-	  Fotter
-	</div>
+	
+	  <!-- FAQ -->
+	  <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+	  <div class="row-fluid faq">
+         	<div class="span10 offset1">
+			<h3>FAQ</h3>
+			<div class="accordion" id="accordion2">
+		  		<div class="accordion-group">
+		    		<div class="accordion-heading">
+		      			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+		        		What will I get?
+		      			</a>
+		    		</div>
+		    		<div id="collapseOne" class="accordion-body collapse in">
+		      			<div class="accordion-inner">
+		        			It depends on your donation.  One of the kids will make you an original piece of art.  Usually, this will be on paper, and we prefer to scan it in and send it to you electronically.   For large donations, we may send a framed piece of art or a sculpture of some sort, but never if the cost to get it to you prevents us from meeting our goal of donating 90% to our charities.
+		      			</div>
+		    		</div>
+		  		</div>
+		  		<div class="accordion-group">
+		    <div class="accordion-heading">
+		      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+		        How much goes to charity?
+		      </a>
+		    </div>
+		    <div id="collapseTwo" class="accordion-body collapse">
+		      <div class="accordion-inner">
+		        We will donate 90% of the proceeds to charity.   The rest will be used for our art supplies, site hosting, and shipping our art to our larger donors.  Our parents will subsidize our costs to ensure we hit the 90%
+		      </div>
+		    </div>
+		  </div>
+			</div>
+			</div>
+         </div>
+
+      <div class="row-fluid footer">
+		<div class="span12">
+		<p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a></p>
+		</div>
       </div>
     </div>
   </body>
